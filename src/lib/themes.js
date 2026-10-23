@@ -252,7 +252,7 @@ const THEMES = {
     warn: "#d20f39",
   }),
 
-  "light-gruvbox": theme("light", "Light Gruvbox", "Gruvbox Light colors, deepened for the checks", {
+  "light-gruvbox": theme("light", "Light Gruvbox", "Gruvbox Light, deepened for the checks", {
     text: LIGHT_TEXT,
     track: "#c8c8c8",
     model: "#8f3f71",
