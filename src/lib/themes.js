@@ -9,7 +9,7 @@ const { parseColor, parseGradientStops, luminance } = require("./colors");
 //                 protanopia, deuteranopia and tritanopia
 // Most dark-* and light-* colors come from VS Code's default themes (Dark+
 // and Light+ syntax, git decorations, warning/error and terminal colors);
-// nocturne, onyx, metro, macchiato, nord, rose-pine and cream take their palettes from
+// nocturne, onyx, metro, macchiato, nord, rose-pine, cream and gruvbox take their palettes from
 // community themes (credited below). A few colors are adjusted where the
 // checks below need it: darkened or lightened for contrast, and gitDirty
 // moved toward orange so a dirty branch never looks like the caution state.
@@ -284,16 +284,17 @@ const THEMES = {
     warn: "#d20f39",
   }),
 
-  "light-gruvbox": theme("light", "Light Gruvbox", "Gruvbox Light, deepened for the checks", {
+  // Palette from Gruvbox Light (github.com/morhetz/gruvbox, MIT).
+  "light-gruvbox": theme("light", "Light Gruvbox", "Retro earthy purple, aqua and orange", {
     text: LIGHT_TEXT,
-    track: "#c8c8c8",
+    track: "#bdae93",
     model: "#8f3f71",
     fiveHour: "#736e0d",
     weekly: "#076678",
     thirdParty: "#af3a03",
     context: "#427b58",
     git: "#3c3836",
-    gitDirty: "#cc241d",
+    gitDirty: "#af3a03",
     meta: "#6f6560",
     caution: "#64410b",
     warn: "#9d0006",
