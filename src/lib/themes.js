@@ -252,6 +252,21 @@ const THEMES = {
     warn: "#d20f39",
   }),
 
+  "light-gruvbox": theme("light", "Light Gruvbox", "Gruvbox Light colors, deepened for the checks", {
+    text: LIGHT_TEXT,
+    track: "#c8c8c8",
+    model: "#8f3f71",
+    fiveHour: "#736e0d",
+    weekly: "#076678",
+    thirdParty: "#af3a03",
+    context: "#427b58",
+    git: "#3c3836",
+    gitDirty: "#cc241d",
+    meta: "#6f6560",
+    caution: "#64410b",
+    warn: "#9d0006",
+  }),
+
   "colorblind-dark": theme(
     "colorblind",
     "Color-blind Dark",
@@ -332,6 +347,7 @@ const THEME_ORDER = [
   "light-sky",
   "light-sunset",
   "light-cream",
+  "light-gruvbox",
   "colorblind-dark",
   "colorblind-light",
   "custom",
