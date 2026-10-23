@@ -7,9 +7,9 @@
 [![Stars](https://img.shields.io/github/stars/wassim-azi/agy-powerline?style=flat&color=gold&cacheSeconds=86400)](https://github.com/wassim-azi/agy-powerline/stargazers)
 [![CI](https://github.com/wassim-azi/agy-powerline/actions/workflows/ci.yml/badge.svg)](https://github.com/wassim-azi/agy-powerline/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/wassim-azi/agy-powerline/actions/workflows/codeql.yml/badge.svg)](https://github.com/wassim-azi/agy-powerline/actions/workflows/codeql.yml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/wassim-azi/agy-powerline/badge)](https://scorecard.dev/viewer/?uri=wassim-azi/agy-powerline)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/wassim-azi/agy-powerline/badge)](https://scorecard.dev/viewer/?uri=github.com/wassim-azi/agy-powerline)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/15655/badge)](https://www.bestpractices.dev/projects/15655)
-[![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#개인정보-보안)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#개인정보-및-보안)
 [![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-0078D6.svg)](docs/install.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open in GitHub Codespaces](https://img.shields.io/badge/open%20in-Codespaces-24292f.svg?logo=github&logoColor=white)](https://codespaces.new/wassim-azi/agy-powerline?quickstart=1)
@@ -36,7 +36,7 @@ npx agy-powerline configure   # 선택 사항: 위젯, 테마, 레이아웃 선�
 agy                           # Antigravity 시작
 ```
 
-처음 설치하면 `init`이 각각의 미리보기와 함께 프리셋, 레이아웃, 테마를 물어봅니다. 질문을 건너뛰려면 `--yes`를 붙이세요. 무언가를 교체하기 전에 먼저 물어보고, Antigravity의 `settings.json`을 먼저 백업합니다. `init` 후에 `agy`를 한 번 재시작하세요. 자세한 내용: [`init`이 하는 일](docs/install.md).
+처음 설치하면 `init`이 각각의 미리보기와 함께 프리셋, 레이아웃, 테마를 물어봅니다. 질문을 건너뛰려면 `--yes`를 붙이세요. 무언가를 교체하기 전에 확인을 받고, Antigravity의 `settings.json`을 먼저 백업합니다. `init` 후에 `agy`를 한 번 재시작하세요. 자세한 내용: [`init`이 하는 일](docs/install.md).
 
 <details>
 <summary>스크린샷: 실제 agy 세션의 바 (Windows Terminal)</summary>
@@ -87,7 +87,7 @@ Nerd Font가 없는 터미널에서는 ASCII 모드를 켜세요(`configure`에�
 | `agent`   | 에이전트 상태, 서브에이전트, 제목, 모드, 샌드박스; 모델, 컨텍스트 %, 아티팩트, 가장 여유 있는 할당량 |
 | `git`     | 프로젝트, 브랜치, 워크트리, 스태시; 파일 수, 변경 줄 수, 커밋                                        |
 | `tokens`  | 컨텍스트 토큰, 세션 토큰 입/출력, 캐시 적중; 오늘 및 최근 7일간 토큰                                 |
-| `quotas`  | 플랜과 모델; 5시간/7일 할당량 나란히; 세 번째 행에 서드파티와 Argon                                  |
+| `quotas`  | 요금제와 모델; 5시간/7일 할당량 나란히; 세 번째 행에 서드파티와 Argon                                |
 | `full`    | 전부: 세션, 프로젝트, git; 컨텍스트, 토큰, 캐시; 양쪽 할당량                                         |
 
 ### 테마
@@ -99,7 +99,7 @@ Nerd Font가 없는 터미널에서는 ASCII 모드를 켜세요(`configure`에�
 | 색약 친화   | `colorblind-dark`, `colorblind-light`                                                                                                                                                    |
 | 직접 지정   | `custom` ([방법](docs/configuration.md#custom-theme))                                                                                                                                    |
 
-모든 테마는 [테마 갤러리](https://agy-powerline.com/) 또는 `npx agy-powerline theme --gallery`에서 미리 볼 수 있습니다. 각 행에 단일 색 그라데이션을 추가하려면 `npx agy-powerline gradient <이름>`을 사용하세요. `aurora`, `sunset`, `ocean`, `forest`, `neon`, `candy`, `rainbow`, `mono` 또는 직접 지정한 색을 쓸 수 있습니다([방법](docs/configuration.md#gradients)).
+모든 테마는 [테마 갤러리](https://agy-powerline.com/) 또는 `npx agy-powerline theme --gallery`에서 미리 볼 수 있습니다. 각 행에 걸쳐 색이 이어지는 그라데이션을 넣으려면 `npx agy-powerline gradient <이름>`을 사용하세요. `aurora`, `sunset`, `ocean`, `forest`, `neon`, `candy`, `rainbow`, `mono` 또는 직접 지정한 색을 쓸 수 있습니다([방법](docs/configuration.md#gradients)).
 
 ### 레이아웃
 
@@ -164,7 +164,7 @@ Nerd Font가 없는 터미널에서는 ASCII 모드를 켜세요(`configure`에�
 | `git`                                                         | 브랜치, 커밋되지 않은 변경, ahead/behind                                                         |
 | `gitChanges`, `gitFiles`, `gitSha`, `gitStash`, `gitWorktree` | 추가/삭제된 줄, 스테이지/수정/추적 안 됨/충돌 파일 수, 커밋 ID, 스태시, 연결된 워크트리          |
 | `project`, `cwd`                                              | 프로젝트 폴더, 현재 폴더                                                                         |
-| `agentState`, `plan`, `sandbox`, `artifacts`, `version`       | 에이전트가 하는 일, 플랜, 샌드박스, 아티팩트, CLI 버전                                           |
+| `agentState`, `plan`, `sandbox`, `artifacts`, `version`       | 에이전트가 하는 일, 요금제, 샌드박스, 아티팩트, CLI 버전                                         |
 | `tasks`                                                       | 실행 중인 서브에이전트와 백그라운드 작업                                                         |
 | `mode`                                                        | 승인 모드(예: accept-edits)와 Vim 모드                                                           |
 | `title`                                                       | 대화 제목                                                                                        |
@@ -210,7 +210,7 @@ npx agy-powerline doctor       # 모든 것이 최신인지 확인
 
 먼저 `npx agy-powerline doctor`를 실행하세요. 설치를 점검하고 해결 방법을 알려줍니다. 일반적인 문제와 버그 신고 방법: [Troubleshooting](docs/troubleshooting.md).
 
-## 개인정보 보안
+## 개인정보 및 보안
 
 - **네트워크 요청 없음, 텔레메트리 없음.** 모든 정보는 agy가 바에 넘겨주는 데이터, `.git`, OS에서 옵니다. 외부 링크는 `configure`의 `g` 하나뿐이며, 브라우저에서 GitHub 페이지를 엽니다.
 - **설정은 안전합니다.** `init`과 `uninstall`은 `settings.json`을 백업하고, 해석할 수 없는 파일은 편집하지 않습니다.
@@ -221,7 +221,7 @@ npx agy-powerline doctor       # 모든 것이 최신인지 확인
 
 ## 기여
 
-기여를 환영합니다. [CONTRIBUTING.md](CONTRIBUTING.md)(설정, 아키텍처, 위젯/테마 추가)과 [Code of Conduct](CODE_OF_CONDUCT.md)부터 읽어보세요. 풀 리퀘스트는 `develop` 브랜치로 보내주세요. 버그는 [GitHub issues](https://github.com/wassim-azi/agy-powerline/issues)에, 아이디어와 피드백은 [Discussions](https://github.com/wassim-azi/agy-powerline/discussions)에 남겨주세요.
+기여를 환영합니다. [CONTRIBUTING.md](CONTRIBUTING.md)(설정, 아키텍처, 위젯/테마 추가)와 [Code of Conduct](CODE_OF_CONDUCT.md)부터 읽어보세요. 풀 리퀘스트는 `develop` 브랜치로 보내주세요. 버그는 [GitHub issues](https://github.com/wassim-azi/agy-powerline/issues)에, 아이디어와 피드백은 [Discussions](https://github.com/wassim-azi/agy-powerline/discussions)에 남겨주세요.
 
 기여해 주신 모든 분들께 감사드립니다:
 
@@ -247,7 +247,7 @@ npx agy-powerline doctor       # 모든 것이 최신인지 확인
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-agy-powerline이 도움이 되었다면 ⭐ 하나가 다른 agy 사용자가 이를 찾는 데 도움이 됩니다.
+agy-powerline이 유용했다면 ⭐를 눌러 주세요. 다른 agy 사용자가 찾는 데 도움이 됩니다.
 
 ## Star History
 
