@@ -80,24 +80,24 @@ Nerd Font가 없는 터미널에서는 ASCII 모드를 켜세요(`configure`에�
 
 프리셋에서 시작한 뒤 조정하세요:
 
-| 프리셋    | 표시 내용                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------- |
-| `default` | 모델, 컨텍스트, git; 두 번째 행에 리셋 시간이 있는 5시간/7일 할당량                              |
-| `compact` | 한 줄: 짧은 모델명, 가장 여유 있는 할당량, 컨텍스트 %, git                                     |
+| 프리셋    | 표시 내용                                                                                            |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| `default` | 모델, 컨텍스트, git; 두 번째 행에 리셋 시간이 있는 5시간/7일 할당량                                  |
+| `compact` | 한 줄: 짧은 모델명, 가장 여유 있는 할당량, 컨텍스트 %, git                                           |
 | `agent`   | 에이전트 상태, 서브에이전트, 제목, 모드, 샌드박스; 모델, 컨텍스트 %, 아티팩트, 가장 여유 있는 할당량 |
-| `git`     | 프로젝트, 브랜치, 워크트리, 스태시; 파일 수, 변경 줄 수, 커밋                                   |
-| `tokens`  | 컨텍스트 토큰, 세션 토큰 입/출력, 캐시 적중; 오늘 및 최근 7일간 토큰                             |
-| `quotas`  | 플랜과 모델; 5시간/7일 할당량 나란히; 세 번째 행에 서드파티와 Argon                              |
-| `full`    | 전부: 세션, 프로젝트, git; 컨텍스트, 토큰, 캐시; 양쪽 할당량                                    |
+| `git`     | 프로젝트, 브랜치, 워크트리, 스태시; 파일 수, 변경 줄 수, 커밋                                        |
+| `tokens`  | 컨텍스트 토큰, 세션 토큰 입/출력, 캐시 적중; 오늘 및 최근 7일간 토큰                                 |
+| `quotas`  | 플랜과 모델; 5시간/7일 할당량 나란히; 세 번째 행에 서드파티와 Argon                                  |
+| `full`    | 전부: 세션, 프로젝트, git; 컨텍스트, 토큰, 캐시; 양쪽 할당량                                         |
 
 ### 테마
 
-| 터미널 배경 | 테마                                                                                                                                                        |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 터미널 배경 | 테마                                                                                                                                                      |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 다크        | `dark-aurora` (기본값), `dark-ocean`, `dark-ember`, `dark-forest`, `dark-neon`, `dark-mono`, `dark-nocturne`, `dark-onyx`, `dark-metro`, `dark-macchiato` |
-| 라이트      | `light-paper`, `light-sky`, `light-sunset`, `light-cream`, `light-gruvbox`                                                                                                    |
-| 색약 친화        | `colorblind-dark`, `colorblind-light`                                                                                                                       |
-| 직접 지정    | `custom` ([방법](docs/configuration.md#custom-theme))                                                                                                       |
+| 라이트      | `light-paper`, `light-sky`, `light-sunset`, `light-cream`, `light-gruvbox`                                                                                |
+| 색약 친화   | `colorblind-dark`, `colorblind-light`                                                                                                                     |
+| 직접 지정   | `custom` ([방법](docs/configuration.md#custom-theme))                                                                                                     |
 
 모든 테마는 [테마 갤러리](https://agy-powerline.com/) 또는 `npx agy-powerline theme --gallery`에서 미리 볼 수 있습니다. 각 행에 단일 색 그라데이션을 추가하려면 `npx agy-powerline gradient <이름>`을 사용하세요. `aurora`, `sunset`, `ocean`, `forest`, `neon`, `candy`, `rainbow`, `mono` 또는 직접 지정한 색을 쓸 수 있습니다([방법](docs/configuration.md#gradients)).
 
@@ -150,50 +150,50 @@ Nerd Font가 없는 터미널에서는 ASCII 모드를 켜세요(`configure`에�
 
 ## 위젯
 
-| 위젯                                                          | 표시 내용                                                                                                |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `model`                                                       | 사용 중인 모델                                                                                           |
-| `clock`                                                       | 현재 현지 시각(12/24시간 형식은 `clock`에서 설정)                                                        |
-| `fiveHourBar`, `weeklyBar`                                    | 남은 5시간/7일 할당량을 미터로 표시, [페이스 마커](docs/configuration.md#quota-pace-marker) 포함             |
-| `fiveHourPct`, `weeklyPct`                                    | 남은 5시간/7일 할당량을 백분율로 표시                                                                      |
-| `fiveHourReset`, `weeklyReset`                                | 할당량이 리셋되기까지 남은 시간 또는 리셋 시각                                                             |
-| `quota`                                                       | 가장 먼저 소진될 가능성이 높은 할당량과 리셋 시각                                                           |
-| `thirdPartyFiveHour`, `thirdPartyWeekly`                      | 서드파티 모델 할당량                                                                                      |
-| `argonWeekly`, `argonReset`                                  | Gemini 4 Argon 자체 주간 할당량(Google AI Pro)과 리셋                                                     |
-| `context`, `contextPct`, `contextTokens`                      | 사용 중인 컨텍스트 창: 미터, 백분율 또는 토큰 수                                                          |
-| `git`                                                         | 브랜치, 커밋되지 않은 변경, ahead/behind                                                                  |
-| `gitChanges`, `gitFiles`, `gitSha`, `gitStash`, `gitWorktree` | 추가/삭제된 줄, 스테이지/수정/추적 안 됨/충돌 파일 수, 커밋 ID, 스태시, 연결된 워크트리                     |
-| `project`, `cwd`                                              | 프로젝트 폴더, 현재 폴더                                                                                  |
-| `agentState`, `plan`, `sandbox`, `artifacts`, `version`       | 에이전트가 하는 일, 플랜, 샌드박스, 아티팩트, CLI 버전                                                    |
-| `tasks`                                                       | 실행 중인 서브에이전트와 백그라운드 작업                                                                  |
-| `mode`                                                        | 승인 모드(예: accept-edits)와 Vim 모드                                                                    |
-| `title`                                                       | 대화 제목                                                                                                 |
-| `totalTokens`, `cacheHit`, `cacheRead`, `cacheCreate`         | 세션 토큰과 프롬프트 캐시 사용량                                                                          |
-| `tokensToday`, `tokensWeek`                                   | 오늘 및 최근 7일간 사용한 토큰, 모든 대화 포함(Node 22.13+)                                                |
-| `ram`                                                         | 시스템 메모리 사용량                                                                                      |
-| `os`                                                          | agy가 동작하는 시스템: Windows, macOS, Linux 또는 WSL                                                     |
-| `host`                                                        | OS의 현재 사용자와 짧은 호스트명(`alex@devbox`)                                                           |
-| `customText`, `exec`                                          | 직접 입력한 텍스트 또는 [셸 명령](docs/configuration.md#shell-command-widget-exec)의 출력                   |
+| 위젯                                                          | 표시 내용                                                                                        |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `model`                                                       | 사용 중인 모델                                                                                   |
+| `clock`                                                       | 현재 현지 시각(12/24시간 형식은 `clock`에서 설정)                                                |
+| `fiveHourBar`, `weeklyBar`                                    | 남은 5시간/7일 할당량을 미터로 표시, [페이스 마커](docs/configuration.md#quota-pace-marker) 포함 |
+| `fiveHourPct`, `weeklyPct`                                    | 남은 5시간/7일 할당량을 백분율로 표시                                                            |
+| `fiveHourReset`, `weeklyReset`                                | 할당량이 리셋되기까지 남은 시간 또는 리셋 시각                                                   |
+| `quota`                                                       | 가장 먼저 소진될 가능성이 높은 할당량과 리셋 시각                                                |
+| `thirdPartyFiveHour`, `thirdPartyWeekly`                      | 서드파티 모델 할당량                                                                             |
+| `argonWeekly`, `argonReset`                                   | Gemini 4 Argon 자체 주간 할당량(Google AI Pro)과 리셋                                            |
+| `context`, `contextPct`, `contextTokens`                      | 사용 중인 컨텍스트 창: 미터, 백분율 또는 토큰 수                                                 |
+| `git`                                                         | 브랜치, 커밋되지 않은 변경, ahead/behind                                                         |
+| `gitChanges`, `gitFiles`, `gitSha`, `gitStash`, `gitWorktree` | 추가/삭제된 줄, 스테이지/수정/추적 안 됨/충돌 파일 수, 커밋 ID, 스태시, 연결된 워크트리          |
+| `project`, `cwd`                                              | 프로젝트 폴더, 현재 폴더                                                                         |
+| `agentState`, `plan`, `sandbox`, `artifacts`, `version`       | 에이전트가 하는 일, 플랜, 샌드박스, 아티팩트, CLI 버전                                           |
+| `tasks`                                                       | 실행 중인 서브에이전트와 백그라운드 작업                                                         |
+| `mode`                                                        | 승인 모드(예: accept-edits)와 Vim 모드                                                           |
+| `title`                                                       | 대화 제목                                                                                        |
+| `totalTokens`, `cacheHit`, `cacheRead`, `cacheCreate`         | 세션 토큰과 프롬프트 캐시 사용량                                                                 |
+| `tokensToday`, `tokensWeek`                                   | 오늘 및 최근 7일간 사용한 토큰, 모든 대화 포함(Node 22.13+)                                      |
+| `ram`                                                         | 시스템 메모리 사용량                                                                             |
+| `os`                                                          | agy가 동작하는 시스템: Windows, macOS, Linux 또는 WSL                                            |
+| `host`                                                        | OS의 현재 사용자와 짧은 호스트명(`alex@devbox`)                                                  |
+| `customText`, `exec`                                          | 직접 입력한 텍스트 또는 [셸 명령](docs/configuration.md#shell-command-widget-exec)의 출력        |
 
 표시할 내용이 없는 위젯은 스스로 숨습니다. 위젯은 색, 이름, 아이콘을 바꾸고 라벨을 없애거나 자체 알림 임계값을 지정할 수 있습니다. [Configuration](docs/configuration.md)을 참고하세요.
 
 ## 명령
 
-| 명령                                               | 하는 일                                                        |
-| -------------------------------------------------- | --------------------------------------------------------------- |
-| `npx agy-powerline init [--yes]`                   | 스테이터스라인 설치 또는 업데이트                                |
-| `npx agy-powerline configure`                      | 에디터 열기(`config` 별칭)                                      |
-| `npx agy-powerline preset <이름>`                   | 프리셋 적용(`--list`로 목록 확인)                                |
-| `npx agy-powerline theme <이름>`                    | 테마 전환(`--list`, `--gallery`)                                 |
-| `npx agy-powerline gradient <이름>`                 | 각 행을 그라데이션으로 색칠(`--list`, `off`)                     |
-| `npx agy-powerline layout <pills\|lines\|classic>`  | 레이아웃 전환                                                   |
-| `npx agy-powerline caps <스타일>`                   | 필 모양 전환: `round`, `angled`, `slanted`, `flat`              |
-| `npx agy-powerline export [파일]`                   | 구성을 파일로 저장, 백업하거나 공유할 때 사용                     |
-| `npx agy-powerline import <파일>`                   | 변경 내용을 보여준 뒤 구성 불러오기(`--merge`)                   |
-| `npx agy-powerline doctor`                          | 설치 상태 확인과 문제 설명                                       |
-| `npx agy-powerline report`                          | 개인정보를 포함하지 않는 버그 리포트 작성                          |
-| `npx agy-powerline uninstall [--delete]`            | agy에서 제거(`--delete`는 파일도 삭제)                            |
-| `npx agy-powerline render --demo`                   | 샘플 데이터로 바 출력                                            |
+| 명령                                               | 하는 일                                            |
+| -------------------------------------------------- | -------------------------------------------------- |
+| `npx agy-powerline init [--yes]`                   | 스테이터스라인 설치 또는 업데이트                  |
+| `npx agy-powerline configure`                      | 에디터 열기(`config` 별칭)                         |
+| `npx agy-powerline preset <이름>`                  | 프리셋 적용(`--list`로 목록 확인)                  |
+| `npx agy-powerline theme <이름>`                   | 테마 전환(`--list`, `--gallery`)                   |
+| `npx agy-powerline gradient <이름>`                | 각 행을 그라데이션으로 색칠(`--list`, `off`)       |
+| `npx agy-powerline layout <pills\|lines\|classic>` | 레이아웃 전환                                      |
+| `npx agy-powerline caps <스타일>`                  | 필 모양 전환: `round`, `angled`, `slanted`, `flat` |
+| `npx agy-powerline export [파일]`                  | 구성을 파일로 저장, 백업하거나 공유할 때 사용      |
+| `npx agy-powerline import <파일>`                  | 변경 내용을 보여준 뒤 구성 불러오기(`--merge`)     |
+| `npx agy-powerline doctor`                         | 설치 상태 확인과 문제 설명                         |
+| `npx agy-powerline report`                         | 개인정보를 포함하지 않는 버그 리포트 작성          |
+| `npx agy-powerline uninstall [--delete]`           | agy에서 제거(`--delete`는 파일도 삭제)             |
+| `npx agy-powerline render --demo`                  | 샘플 데이터로 바 출력                              |
 
 모든 명령은 `--help`로 옵션을 확인할 수 있습니다.
 
